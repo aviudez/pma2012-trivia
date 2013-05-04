@@ -6,7 +6,6 @@ public class Player {
 	
 	private String name = null;
 	private int place = 0;
-	private int purses = 0;
 	private boolean isInPenaltyBox = false;
 	private Responder responder = null;;
 	private HashSet<Category> categoryScores = null;
@@ -20,14 +19,7 @@ public class Player {
 	public String getName() {
 		return this.name;
 	}
-	
-	public void incrementPurses() {
-		this.purses++;
-	}
-	
-	public int getPurses() {
-		return this.purses;
-	}
+
 	
 	public int getPlace() {
 		return this.place;

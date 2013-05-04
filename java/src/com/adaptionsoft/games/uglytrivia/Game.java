@@ -72,7 +72,6 @@ public class Game {
 		
 		if (currentPlayer.respond(question)) {
 			System.out.println("Answer was correct!!!!");
-			currentPlayer.incrementPurses();
 			if(currentPlayer.scoreCategory(question.getCategory())) {
 				System.out.println(currentPlayer.getName() + " scores new category: " + question.getCategory() + ",  and now have " + currentPlayer.countScores() + " already scored");
 			}
