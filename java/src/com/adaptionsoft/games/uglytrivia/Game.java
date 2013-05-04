@@ -1,8 +1,5 @@
 package com.adaptionsoft.games.uglytrivia;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-
 public class Game {
 	Players players = null;
     private QuestionsDecks questionsDecks = null;
@@ -43,8 +40,6 @@ public class Game {
 		System.out.println(currentPlayer.getName() + " is the current player");
 		System.out.println("They have rolled a " + roll);
 		
-		boolean endOfTurn = false;
-		
 		if (currentPlayer.isInPenaltyBox()) {
 			if (roll % 2 == 0) {
 				System.out.println(currentPlayer.getName() + " is not getting out of the penalty box");
@@ -68,8 +63,10 @@ public class Game {
 		Question question = askQuestion();
 		boolean correct = answerQuestion(question);
 		currentPlayer.setInPenaltyBox(!correct);
-			
-		gameFinished = (currentPlayer.getPurses() == 6);
+		gameFinished = (currentPlayer.countScores() == Category.values().length);
+		if (gameFinished) {
+			System.out.println(currentPlayer.getName() + " wins!!!");
+		}
 		players.nextTurn();		
 	}
 	
@@ -79,10 +76,9 @@ public class Game {
 		if (currentPlayer.respond(question)) {
 			System.out.println("Answer was correct!!!!");
 			currentPlayer.incrementPurses();
-			System.out.println(currentPlayer.getName() 
-					+ " now has "
-					+ currentPlayer.getPurses()
-					+ " Gold Coins.");
+			if(currentPlayer.scoreCategory(question.getCategory())) {
+				System.out.println(currentPlayer.getName() + " scores new category: " + question.getCategory() + ",  and now have " + currentPlayer.countScores() + " already scored");
+			}
 			return true;
 		} else {
 			System.out.println("Question was incorrectly answered");

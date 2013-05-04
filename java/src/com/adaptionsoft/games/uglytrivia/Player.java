@@ -1,5 +1,7 @@
 package com.adaptionsoft.games.uglytrivia;
 
+import java.util.HashSet;
+
 public class Player {
 	
 	private String name = null;
@@ -7,10 +9,12 @@ public class Player {
 	private int purses = 0;
 	private boolean isInPenaltyBox = false;
 	private Responder responder = null;;
+	private HashSet<Category> categoryScores = null;
 	
 	public Player(String name, Responder responder) {
 		this.name = name;
 		this.responder = responder;
+		this.categoryScores = new HashSet<Category>();
 	}
 	
 	public String getName() {
@@ -45,4 +49,14 @@ public class Player {
 		return responder.respond(question);
 	}
 	
+	public boolean scoreCategory(Category category) {
+		boolean exists = categoryScores.contains(category);
+		categoryScores.add(category);
+		return !exists;
+	}
+	
+	public int countScores() {
+		return categoryScores.size();
+	}
+
 }

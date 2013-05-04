@@ -17,101 +17,214 @@ Rubén's new location is 2
 The category is Sports
 Sports Question 0
 Answer was correct!!!!
-Rubén now has 1 Gold Coins.
+Rubén scores new category: Sports,  and now have 1 already scored
 Sandra is the current player
 They have rolled a 6
 Sandra's new location is 6
-The category is Sports
-Sports Question 1
+The category is Pop
+Pop Question 0
 Answer was correct!!!!
-Sandra now has 1 Gold Coins.
+Sandra scores new category: Pop,  and now have 1 already scored
 Ángel is the current player
 They have rolled a 6
 Ángel is not getting out of the penalty box
 Rubén is the current player
 They have rolled a 4
 Rubén's new location is 6
-The category is Sports
-Sports Question 2
+The category is Pop
+Pop Question 1
 Answer was correct!!!!
-Rubén now has 2 Gold Coins.
+Rubén scores new category: Pop,  and now have 2 already scored
 Sandra is the current player
 They have rolled a 6
-Sandra's new location is 0
+Sandra's new location is 12
 The category is Pop
-Pop Question 0
+Pop Question 2
 Answer was correct!!!!
-Sandra now has 2 Gold Coins.
 Ángel is the current player
 They have rolled a 6
 Ángel is not getting out of the penalty box
 Rubén is the current player
 They have rolled a 6
-Rubén's new location is 0
+Rubén's new location is 12
 The category is Pop
-Pop Question 1
+Pop Question 3
 Answer was correct!!!!
-Rubén now has 3 Gold Coins.
 Sandra is the current player
 They have rolled a 5
-Sandra's new location is 5
-The category is Science
-Science Question 1
+Sandra's new location is 17
+The category is History
+History Question 0
 Answer was correct!!!!
-Sandra now has 3 Gold Coins.
+Sandra scores new category: History,  and now have 2 already scored
 Ángel is the current player
 They have rolled a 6
 Ángel is not getting out of the penalty box
 Rubén is the current player
 They have rolled a 2
-Rubén's new location is 2
+Rubén's new location is 14
 The category is Sports
-Sports Question 3
+Sports Question 1
 Answer was correct!!!!
-Rubén now has 4 Gold Coins.
 Sandra is the current player
 They have rolled a 3
-Sandra's new location is 8
-The category is Pop
-Pop Question 2
+Sandra's new location is 2
+The category is Sports
+Sports Question 2
 Answer was correct!!!!
-Sandra now has 4 Gold Coins.
+Sandra scores new category: Sports,  and now have 3 already scored
 Ángel is the current player
 They have rolled a 3
 Ángel is getting out of the penalty box
 Ángel's new location is 4
-The category is Pop
-Pop Question 3
+The category is Movies
+Movies Question 0
 Answer was correct!!!!
-Ángel now has 1 Gold Coins.
+Ángel scores new category: Movies,  and now have 1 already scored
 Rubén is the current player
 They have rolled a 4
-Rubén's new location is 6
-The category is Sports
-Sports Question 4
+Rubén's new location is 0
+The category is Pop
+Pop Question 4
 Question was incorrectly answered
 Rubén was sent to the penalty box
 Sandra is the current player
 They have rolled a 1
-Sandra's new location is 9
-The category is Science
-Science Question 2
+Sandra's new location is 3
+The category is Rock
+Rock Question 0
 Answer was correct!!!!
-Sandra now has 5 Gold Coins.
+Sandra scores new category: Rock,  and now have 4 already scored
 Ángel is the current player
 They have rolled a 6
 Ángel's new location is 10
-The category is Sports
-Sports Question 5
+The category is Movies
+Movies Question 1
 Answer was correct!!!!
-Ángel now has 2 Gold Coins.
 Rubén is the current player
 They have rolled a 6
 Rubén is not getting out of the penalty box
 Sandra is the current player
 They have rolled a 3
-Sandra's new location is 0
+Sandra's new location is 6
 The category is Pop
-Pop Question 4
+Pop Question 5
 Answer was correct!!!!
-Sandra now has 6 Gold Coins.
+Ángel is the current player
+They have rolled a 4
+Ángel's new location is 14
+The category is Sports
+Sports Question 3
+Answer was correct!!!!
+Ángel scores new category: Sports,  and now have 2 already scored
+Rubén is the current player
+They have rolled a 5
+Rubén is getting out of the penalty box
+Rubén's new location is 5
+The category is History
+History Question 1
+Answer was correct!!!!
+Rubén scores new category: History,  and now have 3 already scored
+Sandra is the current player
+They have rolled a 3
+Sandra's new location is 9
+The category is Rock
+Rock Question 1
+Question was incorrectly answered
+Sandra was sent to the penalty box
+Ángel is the current player
+They have rolled a 6
+Ángel's new location is 2
+The category is Sports
+Sports Question 4
+Answer was correct!!!!
+Rubén is the current player
+They have rolled a 5
+Rubén's new location is 10
+The category is Movies
+Movies Question 2
+Answer was correct!!!!
+Rubén scores new category: Movies,  and now have 4 already scored
+Sandra is the current player
+They have rolled a 5
+Sandra is getting out of the penalty box
+Sandra's new location is 14
+The category is Sports
+Sports Question 5
+Question was incorrectly answered
+Sandra was sent to the penalty box
+Ángel is the current player
+They have rolled a 5
+Ángel's new location is 7
+The category is Science
+Science Question 1
+Answer was correct!!!!
+Ángel scores new category: Science,  and now have 3 already scored
+Rubén is the current player
+They have rolled a 2
+Rubén's new location is 12
+The category is Pop
+Pop Question 6
+Answer was correct!!!!
+Sandra is the current player
+They have rolled a 3
+Sandra is getting out of the penalty box
+Sandra's new location is 17
+The category is History
+History Question 2
+Answer was correct!!!!
+Ángel is the current player
+They have rolled a 4
+Ángel's new location is 11
+The category is History
+History Question 3
+Question was incorrectly answered
+Ángel was sent to the penalty box
+Rubén is the current player
+They have rolled a 5
+Rubén's new location is 17
+The category is History
+History Question 4
+Answer was correct!!!!
+Sandra is the current player
+They have rolled a 4
+Sandra's new location is 3
+The category is Rock
+Rock Question 2
+Question was incorrectly answered
+Sandra was sent to the penalty box
+Ángel is the current player
+They have rolled a 6
+Ángel is not getting out of the penalty box
+Rubén is the current player
+They have rolled a 2
+Rubén's new location is 1
+The category is Science
+Science Question 2
+Answer was correct!!!!
+Rubén scores new category: Science,  and now have 5 already scored
+Sandra is the current player
+They have rolled a 1
+Sandra is getting out of the penalty box
+Sandra's new location is 4
+The category is Movies
+Movies Question 3
+Answer was correct!!!!
+Sandra scores new category: Movies,  and now have 5 already scored
+Ángel is the current player
+They have rolled a 2
+Ángel is not getting out of the penalty box
+Rubén is the current player
+They have rolled a 5
+Rubén's new location is 6
+The category is Pop
+Pop Question 7
+Answer was correct!!!!
+Sandra is the current player
+They have rolled a 3
+Sandra's new location is 7
+The category is Science
+Science Question 3
+Answer was correct!!!!
+Sandra scores new category: Science,  and now have 6 already scored
+Sandra wins!!!
