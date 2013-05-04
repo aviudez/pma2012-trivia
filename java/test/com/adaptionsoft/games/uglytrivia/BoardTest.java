@@ -40,22 +40,17 @@ public class BoardTest {
 	}
 
 	@Test(expected=IllegalArgumentException.class)
-	public void test_cero() {
-		board.getPlaceCategory(0);
-	}
-
-	@Test(expected=IllegalArgumentException.class)
 	public void test_vacio() {
-		emptyBoard.getPlaceCategory(1);
+		emptyBoard.getPlaceCategory(0);
 	}
 	
 	@Test
 	public void test_orden() {
-		Assert.assertEquals(Category.POP, board.getPlaceCategory(1));
-		Assert.assertEquals(Category.ROCK, board.getPlaceCategory(2));
-		Assert.assertEquals(Category.SCIENCE, board.getPlaceCategory(3));
-		Assert.assertEquals(Category.SPORTS, board.getPlaceCategory(4));
-		Assert.assertEquals(Category.POP, board.getPlaceCategory(5));
+		Assert.assertEquals(Category.POP, board.getPlaceCategory(0));
+		Assert.assertEquals(Category.ROCK, board.getPlaceCategory(1));
+		Assert.assertEquals(Category.SCIENCE, board.getPlaceCategory(2));
+		Assert.assertEquals(Category.SPORTS, board.getPlaceCategory(3));
+		Assert.assertEquals(Category.POP, board.getPlaceCategory(4));
 
 	}
 

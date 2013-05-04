@@ -19,11 +19,15 @@ public class Board {
 		return places.size();
 	}
 	
+	public int getNewPlace(int actual, int roll) {
+		return (actual + roll) % places.size();
+	}
+	
 	public Category getPlaceCategory(int place) {
-		if (place > places.size() || place < 1) {
+		if (place >= places.size() || place < 0) {
 			throw new IllegalArgumentException("Incorrect place requested, num places: " + places.size() + ", place requested: " + place);
 		}
-		return places.get(place-1);
+		return places.get(place);
 	}
 
 }
