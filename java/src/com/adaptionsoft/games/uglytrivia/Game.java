@@ -10,30 +10,20 @@ public class Game {
     boolean[] inPenaltyBox  = new boolean[6];
     int[] highscores= new int[6];
 
-    LinkedList popQuestions = new LinkedList();
-    LinkedList scienceQuestions = new LinkedList();
-    LinkedList sportsQuestions = new LinkedList();
-    LinkedList rockQuestions = new LinkedList();
-    
+    private QuestionsDecks questionsDecks = null;
+    private Board board = null;
+ 
     int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
     
     private Dado dado = null;
     
     
-    public  Game(Dado dado){
+    public  Game(Dado dado, QuestionsDecks questionsDecks, Board board){
     	this.dado = dado;
-    	for (int i = 0; i < 50; i++) {
-			popQuestions.addLast("Pop Question " + i);
-			scienceQuestions.addLast(("Science Question " + i));
-			sportsQuestions.addLast(("Sports Question " + i));
-			rockQuestions.addLast(createRockQuestion(i));
-    	}
+    	this.questionsDecks = questionsDecks;
+    	this.board = board;
     }
-
-	public String createRockQuestion(int index){
-		return "Rock Question " + index;
-	}
 
 	/**
 	 * Return true if the game is playable.
@@ -104,14 +94,10 @@ public class Game {
 	}
 
 	private void askQuestion() {
-		if (currentCategory() == "Pop")
-			System.out.println(popQuestions.removeFirst());
-		if (currentCategory() == "Science")
-			System.out.println(scienceQuestions.removeFirst());
-		if (currentCategory() == "Sports")
-			System.out.println(sportsQuestions.removeFirst());
-		if (currentCategory() == "Rock")
-			System.out.println(rockQuestions.removeFirst());		
+		Question question = questionsDecks.nextQuestion(currentCategory());
+		
+		System.out.println(question.getText());
+	
 	}
 	
   public static void main(String[] args) {
@@ -119,17 +105,8 @@ public class Game {
   }
 
 	// randomly return a category
-	private String currentCategory() {
-		if (places[currentPlayer] == 0) return "Pop";
-		if (places[currentPlayer] == 4) return "Pop";
-		if (places[currentPlayer] == 8) return "Pop";
-		if (places[currentPlayer] == 1) return "Science";
-		if (places[currentPlayer] == 5) return "Science";
-		if (places[currentPlayer] == 9) return "Science";
-		if (places[currentPlayer] == 2) return "Sports";
-		if (places[currentPlayer] == 6) return "Sports";
-		if (places[currentPlayer] == 10) return "Sports";
-		return "Rock";
+	private Category currentCategory() {
+		return board.getPlaceCategory(places[currentPlayer]+1);
 	}
 
 	public boolean wasCorrectlyAnswered() {

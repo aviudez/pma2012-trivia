@@ -46,7 +46,9 @@ public class GameRunnerTestCaracterizacion extends GameRunner {
 	public void test() throws IOException {
 
 		Random rand = new Random(0L);
-		Game aGame = new Game(new Dado(rand,6));
+		
+		Game aGame = GameRunner.initialize(rand);
+
 		aGame.add("Ángel");
 		aGame.add("Rubén");
 		aGame.add("Sandra");
