@@ -1,6 +1,5 @@
 package com.adaptionsoft.games.uglytrivia;
 
-import static org.junit.Assert.*;
 import junit.framework.Assert;
 
 import org.junit.After;

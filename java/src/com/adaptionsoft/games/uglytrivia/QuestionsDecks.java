@@ -1,10 +1,9 @@
 package com.adaptionsoft.games.uglytrivia;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Map;
+import java.util.Queue;
 
 public class QuestionsDecks {
 	

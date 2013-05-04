@@ -1,7 +1,5 @@
 package com.adaptionsoft.games.uglytrivia;
 
-import static org.junit.Assert.*;
-
 import java.util.Random;
 
 import junit.framework.Assert;
@@ -10,7 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class DadoTest {
+public class DiceTest {
 
 	private Random random = null;
 	@Before
@@ -29,12 +27,12 @@ public class DadoTest {
 
 	@Test(expected=IllegalArgumentException.class)
 	public void test_cero_caras() {
-		Dice dado = new Dice(random, 0);
+		Dice dice = new Dice(random, 0);
 	}
 
 	@Test(expected=IllegalArgumentException.class)
 	public void test_una_cara() {
-		Dice dado = new Dice(random, 1);
+		Dice dice = new Dice(random, 1);
 	}
 	
 

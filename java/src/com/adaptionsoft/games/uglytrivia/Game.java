@@ -7,9 +7,6 @@ public class Game {
     private Dice dice = null;
     private boolean gameFinished = false;
  
-    int[] highscores= new int[6];
-    
-    
     public  Game(Dice dado, QuestionsDecks questionsDecks, Board board){
     	this.dice = dado;
     	this.questionsDecks = questionsDecks;
