@@ -41,13 +41,13 @@ public class DadoTest {
 	@Test
 	public void test_dos_caras() {
 		Dado dado = new Dado(random, 2);
+		Assert.assertEquals(2,dado.tirada());
+		Assert.assertEquals(2,dado.tirada());
 		Assert.assertEquals(1,dado.tirada());
+		Assert.assertEquals(2,dado.tirada());
+		Assert.assertEquals(2,dado.tirada());
 		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(1,dado.tirada());
+		Assert.assertEquals(2,dado.tirada());
 
 	}
 	
@@ -55,19 +55,16 @@ public class DadoTest {
 	public void test_seis_caras() {
 		Dado dado = new Dado(random, 6);
 		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(4,dado.tirada());
 		Assert.assertEquals(5,dado.tirada());
-		Assert.assertEquals(3,dado.tirada());
-		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(4,dado.tirada());
 		Assert.assertEquals(2,dado.tirada());
-		Assert.assertEquals(2,dado.tirada());
-		Assert.assertEquals(5,dado.tirada());
-		Assert.assertEquals(5,dado.tirada());
+		Assert.assertEquals(6,dado.tirada());
+		Assert.assertEquals(6,dado.tirada());
+		Assert.assertEquals(6,dado.tirada());
+		Assert.assertEquals(6,dado.tirada());
+		Assert.assertEquals(4,dado.tirada());
+		Assert.assertEquals(4,dado.tirada());
 		Assert.assertEquals(3,dado.tirada());
-		for (int i=0; i <100; i++) {
-			System.out.println(dado.tirada());
-		}
+		Assert.assertEquals(6,dado.tirada());
 	}
 
 }
