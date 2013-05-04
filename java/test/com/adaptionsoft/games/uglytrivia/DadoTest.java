@@ -24,47 +24,47 @@ public class DadoTest {
 
 	@Test(expected=IllegalArgumentException.class)
 	public void test_caras_negativas() {
-		Dado dado = new Dado(random, -2);
+		Dice dado = new Dice(random, -2);
 	}
 
 	@Test(expected=IllegalArgumentException.class)
 	public void test_cero_caras() {
-		Dado dado = new Dado(random, 0);
+		Dice dado = new Dice(random, 0);
 	}
 
 	@Test(expected=IllegalArgumentException.class)
 	public void test_una_cara() {
-		Dado dado = new Dado(random, 1);
+		Dice dado = new Dice(random, 1);
 	}
 	
 
 	@Test
 	public void test_dos_caras() {
-		Dado dado = new Dado(random, 2);
-		Assert.assertEquals(2,dado.tirada());
-		Assert.assertEquals(2,dado.tirada());
-		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(2,dado.tirada());
-		Assert.assertEquals(2,dado.tirada());
-		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(2,dado.tirada());
+		Dice dado = new Dice(random, 2);
+		Assert.assertEquals(2,dado.roll());
+		Assert.assertEquals(2,dado.roll());
+		Assert.assertEquals(1,dado.roll());
+		Assert.assertEquals(2,dado.roll());
+		Assert.assertEquals(2,dado.roll());
+		Assert.assertEquals(1,dado.roll());
+		Assert.assertEquals(2,dado.roll());
 
 	}
 	
 	@Test
 	public void test_seis_caras() {
-		Dado dado = new Dado(random, 6);
-		Assert.assertEquals(1,dado.tirada());
-		Assert.assertEquals(5,dado.tirada());
-		Assert.assertEquals(2,dado.tirada());
-		Assert.assertEquals(6,dado.tirada());
-		Assert.assertEquals(6,dado.tirada());
-		Assert.assertEquals(6,dado.tirada());
-		Assert.assertEquals(6,dado.tirada());
-		Assert.assertEquals(4,dado.tirada());
-		Assert.assertEquals(4,dado.tirada());
-		Assert.assertEquals(3,dado.tirada());
-		Assert.assertEquals(6,dado.tirada());
+		Dice dado = new Dice(random, 6);
+		Assert.assertEquals(1,dado.roll());
+		Assert.assertEquals(5,dado.roll());
+		Assert.assertEquals(2,dado.roll());
+		Assert.assertEquals(6,dado.roll());
+		Assert.assertEquals(6,dado.roll());
+		Assert.assertEquals(6,dado.roll());
+		Assert.assertEquals(6,dado.roll());
+		Assert.assertEquals(4,dado.roll());
+		Assert.assertEquals(4,dado.roll());
+		Assert.assertEquals(3,dado.roll());
+		Assert.assertEquals(6,dado.roll());
 	}
 
 }

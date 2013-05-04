@@ -21,8 +21,11 @@ import org.junit.Test;
 
 import sun.misc.IOUtils;
 
-import com.adaptionsoft.games.uglytrivia.Dado;
+import com.adaptionsoft.games.uglytrivia.Dice;
+import com.adaptionsoft.games.uglytrivia.DefaultResponder;
 import com.adaptionsoft.games.uglytrivia.Game;
+import com.adaptionsoft.games.uglytrivia.Player;
+import com.adaptionsoft.games.uglytrivia.Responder;
 
 public class GameRunnerTestCaracterizacion extends GameRunner {
 	
@@ -48,10 +51,11 @@ public class GameRunnerTestCaracterizacion extends GameRunner {
 		Random rand = new Random(0L);
 		
 		Game aGame = GameRunner.initialize(rand);
+		Responder responder = new DefaultResponder(rand);
 
-		aGame.add("Ángel");
-		aGame.add("Rubén");
-		aGame.add("Sandra");
+		aGame.add(new Player("Ángel",responder));
+		aGame.add(new Player("Rubén",responder));
+		aGame.add(new Player("Sandra",responder));
 		
 		
 		GameRunner.run(aGame, rand);

@@ -6,9 +6,11 @@ public class Player {
 	private int place = 0;
 	private int purses = 0;
 	private boolean isInPenaltyBox = false;
+	private Responder responder = null;;
 	
-	public Player(String name) {
+	public Player(String name, Responder responder) {
 		this.name = name;
+		this.responder = responder;
 	}
 	
 	public String getName() {
@@ -37,6 +39,10 @@ public class Player {
 	
 	public boolean isInPenaltyBox() {
 		return isInPenaltyBox;
+	}
+	
+	public boolean respond(Question question) {
+		return responder.respond(question);
 	}
 	
 }

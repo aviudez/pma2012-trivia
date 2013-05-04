@@ -11,13 +11,14 @@ public class PlayersTest {
 	
 	private Players players = null;
 	private Players emptyPlayers = null;
-
+	private static Responder DEFAULT_RESPONDER = new DefaultResponder();
+	
 	@Before
 	public void setUp() throws Exception {
 		players = new Players();
-		players.add(new Player("Player 1"));
-		players.add(new Player("Player 2"));
-		players.add(new Player("Player 3"));
+		players.add(new Player("Player 1", DEFAULT_RESPONDER));
+		players.add(new Player("Player 2", DEFAULT_RESPONDER ));
+		players.add(new Player("Player 3", DEFAULT_RESPONDER ));
 		
 		emptyPlayers = new Players();
 	}
