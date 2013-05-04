@@ -8,7 +8,7 @@ public class Game {
     private QuestionsDecks questionsDecks = null;
     private Board board = null;
     private Dado dado = null;
-    
+    private boolean gameFinished = false;
  
     int[] highscores= new int[6];
 
@@ -50,30 +50,24 @@ public class Game {
 		System.out.println("They have rolled a " + roll);
 		
 		if (currentPlayer.isInPenaltyBox()) {
-			if (roll % 2 != 0) {
-				isGettingOutOfPenaltyBox = true;
-				
-				System.out.println(currentPlayer.getName() + " is getting out of the penalty box");
-				currentPlayer.setPlace(board.getNewPlace(currentPlayer.getPlace(), roll));
-				System.out.println(currentPlayer.getName()
-						+ "'s new location is " 
-						+ currentPlayer.getPlace());
-				System.out.println("The category is " + currentCategory());
-				askQuestion();
-			} else {
+			if (roll % 2 == 0) {
 				System.out.println(currentPlayer.getName() + " is not getting out of the penalty box");
+				
 				isGettingOutOfPenaltyBox = false;
-				}
-			
-		} else {
-			currentPlayer.setPlace(board.getNewPlace(currentPlayer.getPlace(), roll));
-			System.out.println(currentPlayer.getName() 
-					+ "'s new location is " 
-					+ currentPlayer.getPlace());
-			System.out.println("The category is " + currentCategory());
-			askQuestion();
+				
+				return;
+			} else {
+				isGettingOutOfPenaltyBox = true;
+				System.out.println(currentPlayer.getName() + " is getting out of the penalty box");
+			}
 		}
-		
+			
+		currentPlayer.setPlace(board.getNewPlace(currentPlayer.getPlace(), roll));
+		System.out.println(currentPlayer.getName()
+				+ "'s new location is " 
+				+ currentPlayer.getPlace());
+		System.out.println("The category is " + currentCategory());
+		askQuestion();		
 }
 
 	private void askQuestion() {
@@ -83,16 +77,11 @@ public class Game {
 	
 	}
 	
-  public static void main(String[] args) {
-    System.out.println("Hello World!"); // Display the string.
-  }
-
-	// randomly return a category
 	private Category currentCategory() {
 		return board.getPlaceCategory(players.getCurrentPlayer().getPlace());
 	}
 
-	public boolean wasCorrectlyAnswered() {
+	public void wasCorrectlyAnswered() {
 		Player currentPlayer = players.getCurrentPlayer();
 		if (currentPlayer.isInPenaltyBox()) {
 			if (isGettingOutOfPenaltyBox) {
@@ -102,12 +91,9 @@ public class Game {
 						+ " now has "
 						+ currentPlayer.getPurses()
 						+ " Gold Coins.");
-					boolean winner = didPlayerWin();
 					players.nextTurn();
-					return winner;
 			} else {
 				players.nextTurn();
-				return true;
 			}
 		} else {
 			System.out.println("Answer was corrent!!!!");
@@ -116,42 +102,26 @@ public class Game {
 					+ " now has "
 					+ currentPlayer.getPurses()
 					+ " Gold Coins.");
-			boolean winner = didPlayerWin();
 			players.nextTurn();
-			return winner;
-			
 		}
+		
+		gameFinished = (currentPlayer.getPurses() == 6);
+		
 	}
 	
-	public boolean wrongAnswer(){
+	public boolean isGameFinished() {
+		return gameFinished;
+	}
+	
+	public void wrongAnswer(){
 		System.out.println("Question was incorrectly answered");
 		Player currentPlayer = players.getCurrentPlayer();
 		System.out.println(currentPlayer.getName()+ " was sent to the penalty box");
 		currentPlayer.setInPenaltyBox(true);
+
+		gameFinished = (currentPlayer.getPurses() == 6);
 		
 		players.nextTurn();
-		return true;
 	}
 
-	public static class SimpleSingleton {
-    private static SimpleSingleton singleInstance =  new SimpleSingleton();
- 
-    //Marking default constructor private
-    //to avoid direct instantiation.
-    private SimpleSingleton() {
-    }
- 
-    //Get instance for class SimpleSingleton
-    public static SimpleSingleton getInstance() {
- 
-        return singleInstance;
-  }
-}
-	/**
-	 * Tells if the last player won.
-	 */
-	private boolean didPlayerWin() {
-		return !(players.getCurrentPlayer().getPurses() == 6);
-//		return !(purses[currentPlayer] == 6);
-	}
 }
