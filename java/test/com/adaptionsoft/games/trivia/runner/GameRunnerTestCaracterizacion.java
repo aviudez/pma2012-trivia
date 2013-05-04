@@ -21,6 +21,7 @@ import org.junit.Test;
 
 import sun.misc.IOUtils;
 
+import com.adaptionsoft.games.uglytrivia.Dado;
 import com.adaptionsoft.games.uglytrivia.Game;
 
 public class GameRunnerTestCaracterizacion extends GameRunner {
@@ -45,7 +46,7 @@ public class GameRunnerTestCaracterizacion extends GameRunner {
 	public void test() throws IOException {
 
 		Random rand = new Random(0L);
-		Game aGame = new Game();
+		Game aGame = new Game(new Dado(rand,6));
 		aGame.add("Ángel");
 		aGame.add("Rubén");
 		aGame.add("Sandra");

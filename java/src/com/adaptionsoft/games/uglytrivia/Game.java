@@ -18,7 +18,11 @@ public class Game {
     int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
     
-    public  Game(){
+    private Dado dado = null;
+    
+    
+    public  Game(Dado dado){
+    	this.dado = dado;
     	for (int i = 0; i < 50; i++) {
 			popQuestions.addLast("Pop Question " + i);
 			scienceQuestions.addLast(("Science Question " + i));
@@ -62,7 +66,8 @@ public class Game {
 		return players.size();
 	}
 
-	public void roll(int roll) {
+	public void roll() {
+		int roll = dado.tirada();
 		System.out.println(players.get(currentPlayer) + " is the current player");
 		System.out.println("They have rolled a " + roll);
 		
